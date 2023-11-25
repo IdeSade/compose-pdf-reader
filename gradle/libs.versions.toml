@@ -1,0 +1,27 @@
+[versions]
+
+gradlePlugin = "8.1.4"
+kotlin = "1.9.20"
+
+activity = "1.8.1"
+composeCompiler = "1.5.4"
+composeBom = "2023.10.01"
+
+[libraries]
+
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-util = { module = "androidx.compose.ui:ui-util" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+
+[bundles]
+
+[plugins]
+
+android-aplication = { id = "com.android.application", version.ref = "gradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
