@@ -38,17 +38,3 @@ dependencies {
     implementation(libs.compose.ui.util)
     implementation(libs.compose.material3)
 }
-
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.idesade"
-            artifactId = "compose-pdf-reader"
-            version = "1.0.0-alpha04"
-
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
-}
