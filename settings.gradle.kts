@@ -1,4 +1,3 @@
-import java.awt.Event.HOME
 import java.net.URI
 
 pluginManagement {
