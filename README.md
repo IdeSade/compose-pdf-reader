@@ -16,15 +16,13 @@ SimplePdfReader is a PDF reader library written completely in Jetpack Compose, t
 ## Integrate
 Add the JitPack maven repository
 ```gradle
-    maven { url "https://jitpack.io"  }
+maven { url "https://jitpack.io"  }
 ```
 Add the dependency
 ```gradle
-dependencies {
-    implementation("com.github.idesade:compose-pdf-reader:LATEST_VERSION")
-}
+implementation("com.github.idesade:compose-pdf-reader:LATEST_VERSION")
 ```
 ## How to use
 ```kotlin
-   PdfReader(File(...))
+PdfReader(File(...))
 ```
