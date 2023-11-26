@@ -1,3 +1,4 @@
+import java.awt.Event.HOME
 import java.net.URI
 
 pluginManagement {
@@ -14,6 +15,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = URI("https://jitpack.io") }
+        mavenLocal()
     }
 }
 

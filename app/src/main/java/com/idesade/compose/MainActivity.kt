@@ -1,11 +1,11 @@
-package com.idesade.composepdf
+package com.idesade.compose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.idesade.composepdf.ui.screen.MainScreen
-import com.idesade.composepdf.ui.screen.PdfFile
-import com.idesade.composepdf.ui.theme.AppTheme
+import com.idesade.compose.ui.screen.MainScreen
+import com.idesade.compose.ui.screen.PdfFile
+import com.idesade.compose.ui.theme.AppTheme
 import java.io.File
 import java.io.FileOutputStream
 

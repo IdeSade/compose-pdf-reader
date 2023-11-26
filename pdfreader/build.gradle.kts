@@ -27,13 +27,6 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
-
-    publishing {
-        multipleVariants {
-            allVariants()
-            withJavadocJar()
-        }
-    }
 }
 
 kotlin {
@@ -49,9 +42,9 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.idesade"
+            groupId = "com.github.idesade"
             artifactId = "compose-pdf-reader"
-            version = "1.0.0-alpha02"
+            version = "1.0.0-alpha04"
 
             afterEvaluate {
                 from(components["release"])

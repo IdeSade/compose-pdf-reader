@@ -1,4 +1,4 @@
-package com.idesade.composepdf.ui.theme
+package com.idesade.compose.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

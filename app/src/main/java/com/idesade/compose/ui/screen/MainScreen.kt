@@ -1,4 +1,4 @@
-package com.idesade.composepdf.ui.screen
+package com.idesade.compose.ui.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.idesade.compose.pdf.PdfReader
-import com.idesade.composepdf.ui.theme.AppTheme
+import com.idesade.compose.ui.theme.AppTheme
 import java.io.File
 
 data class PdfFile(
