@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.idesade.composepdf"
+    namespace = "com.idesade.compose"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.idesade.composepdf"
+        applicationId = "com.idesade.compose"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
