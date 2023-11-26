@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
-    namespace = "com.idesade.pdfreader"
+    namespace = "com.idesade.compose"
     compileSdk = 34
 
     defaultConfig {
@@ -26,6 +27,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
+
+    publishing {
+        multipleVariants {
+            allVariants()
+            withJavadocJar()
+        }
+    }
 }
 
 kotlin {
@@ -34,7 +42,20 @@ kotlin {
 
 dependencies {
     implementation(platform(libs.compose.bom))
-    implementation(libs.compose.ui)
     implementation(libs.compose.ui.util)
     implementation(libs.compose.material3)
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.idesade"
+            artifactId = "compose-pdf-reader"
+            version = "1.0.0-alpha02"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
