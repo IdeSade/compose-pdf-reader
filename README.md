@@ -6,6 +6,7 @@ SimplePdfReader is a PDF reader library written completely in Jetpack Compose, t
 ## Features
 
 - Very simple
+- Zoom and pan
 - Double tap to zoom and pan
 
 # Demo
