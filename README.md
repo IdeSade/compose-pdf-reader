@@ -1,5 +1,7 @@
 # SimplePdfReader - Jetpack Compose PDF reader
-[![](https://jitpack.io/v/idesade/compose-pdf-reader.svg)](https://jitpack.io/#idesade/compose-pdf-reader)
+
+![GitHub release](https://img.shields.io/github/v/release/IdeSade/compose-pdf-reader)
+![JitPack](https://img.shields.io/jitpack/version/com.github.idesade/compose-pdf-reader)
 
 SimplePdfReader is a PDF reader library written completely in Jetpack Compose, this was created using [PdfRender](https://developer.android.com/reference/android/graphics/pdf/PdfRenderer) and coroutine.
 
@@ -25,5 +27,5 @@ implementation("com.github.idesade:compose-pdf-reader:LATEST_VERSION")
 ```
 ## How to use
 ```kotlin
-PdfReader(File(...))
+PdfReader(File("path/file.pdf"))
 ```
