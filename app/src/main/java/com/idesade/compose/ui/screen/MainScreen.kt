@@ -1,5 +1,6 @@
 package com.idesade.compose.ui.screen
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -32,35 +34,45 @@ fun MainScreen(
 ) {
     var currentPdfFile by remember { mutableStateOf(data.firstOrNull()) }
 
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp)
-                .weight(1f),
+    Scaffold {
+        Column(
+            modifier = Modifier.padding(it),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            PdfReader(
-                file = currentPdfFile?.file
-            )
-        }
-
-        data.forEach { pdfFile ->
-            Button(
-                modifier = Modifier.fillMaxWidth(0.6f),
-                onClick = {
-                    currentPdfFile = pdfFile
-                }
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .weight(1f),
             ) {
-                Text(text = pdfFile.name)
+                PdfReader(
+                    file = currentPdfFile?.file
+                )
             }
+
+            data.forEach { pdfFile ->
+                Button(
+                    modifier = Modifier.fillMaxWidth(0.6f),
+                    onClick = {
+                        currentPdfFile = pdfFile
+                    }
+                ) {
+                    Text(text = pdfFile.name)
+                }
+            }
+            Spacer(modifier = Modifier.height(4.dp))
         }
-        Spacer(modifier = Modifier.height(4.dp))
     }
+
 }
 
-@Preview
+@Preview(
+    name = "Light"
+)
+@Preview(
+    name = "Dark",
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 @Composable
 fun PreviewMainScreen() {
     AppTheme {
